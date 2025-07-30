@@ -1,0 +1,32 @@
+{"level":"info","message":"Auth service running on port 3001","service":"auth-service","timestamp":"2025-07-30T09:46:54.428Z"}
+{"level":"info","message":"Auth service running on port 3001","service":"auth-service","timestamp":"2025-07-30T09:47:02.755Z"}
+{"level":"info","message":"Auth service running on port 3001","service":"auth-service","timestamp":"2025-07-30T09:47:21.829Z"}
+{"level":"info","message":"Auth service running on port 3001","service":"auth-service","timestamp":"2025-07-30T09:47:36.475Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-07-30T09:47:56.935Z"}
+{"level":"info","message":"Request body, [object Object]","service":"auth-service","timestamp":"2025-07-30T09:47:56.936Z"}
+{"level":"info","message":"Registration endpoint hit...","service":"auth-service","timestamp":"2025-07-30T09:47:56.955Z"}
+{"level":"error","message":"Registration error occured Operation `users.findOne()` buffering timed out after 10000ms","service":"auth-service","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (D:\\Coding\\Advanced Concepts\\SocialMedia_Microservices\\auth-service\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:187:23)\n    at listOnTimeout (node:internal/timers:573:17)\n    at process.processTimers (node:internal/timers:514:7)","timestamp":"2025-07-30T09:48:06.977Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-07-30T09:48:20.337Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-07-30T09:48:27.209Z"}
+{"level":"info","message":"Request body, [object Object]","service":"auth-service","timestamp":"2025-07-30T09:48:27.211Z"}
+{"level":"info","message":"Registration endpoint hit...","service":"auth-service","timestamp":"2025-07-30T09:48:27.218Z"}
+{"buffer":{"data":[104,137,234,107,66,27,105,169,63,174,153,13],"type":"Buffer"},"level":"warn","message":"User saved successfully","service":"auth-service","timestamp":"2025-07-30T09:48:28.124Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-07-30T09:48:51.869Z"}
+{"level":"info","message":"Request body, [object Object]","service":"auth-service","timestamp":"2025-07-30T09:48:51.870Z"}
+{"level":"info","message":"Registration endpoint hit...","service":"auth-service","timestamp":"2025-07-30T09:48:51.873Z"}
+{"level":"warn","message":"User already exists","service":"auth-service","timestamp":"2025-07-30T09:48:53.055Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-07-30T09:48:58.827Z"}
+{"level":"info","message":"Request body, [object Object]","service":"auth-service","timestamp":"2025-07-30T09:48:58.827Z"}
+{"level":"info","message":"Registration endpoint hit...","service":"auth-service","timestamp":"2025-07-30T09:48:58.831Z"}
+{"level":"warn","message":"User already exists","service":"auth-service","timestamp":"2025-07-30T09:48:59.051Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-07-30T09:49:07.682Z"}
+{"level":"info","message":"Request body, [object Object]","service":"auth-service","timestamp":"2025-07-30T09:49:07.684Z"}
+{"level":"info","message":"Registration endpoint hit...","service":"auth-service","timestamp":"2025-07-30T09:49:07.687Z"}
+{"buffer":{"data":[104,137,234,148,66,27,105,169,63,174,153,23],"type":"Buffer"},"level":"warn","message":"User saved successfully","service":"auth-service","timestamp":"2025-07-30T09:49:10.716Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"auth-service","timestamp":"2025-07-30T09:49:22.151Z"}
+{"level":"info","message":"Request body, [object Object]","service":"auth-service","timestamp":"2025-07-30T09:49:22.153Z"}
+{"level":"info","message":"Login endpoint hit...","service":"auth-service","timestamp":"2025-07-30T09:49:22.156Z"}
+{"0":"\"","1":"u","10":" ","11":"i","12":"s","13":" ","14":"n","15":"o","16":"t","17":" ","18":"a","19":"l","2":"s","20":"l","21":"o","22":"w","23":"e","24":"d","3":"e","4":"r","5":"n","6":"a","7":"m","8":"e","9":"\"","level":"warn","message":"Validation error","service":"auth-service","timestamp":"2025-07-30T09:49:22.160Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"auth-service","timestamp":"2025-07-30T09:49:35.436Z"}
+{"level":"info","message":"Request body, [object Object]","service":"auth-service","timestamp":"2025-07-30T09:49:35.436Z"}
+{"level":"info","message":"Login endpoint hit...","service":"auth-service","timestamp":"2025-07-30T09:49:35.438Z"}
