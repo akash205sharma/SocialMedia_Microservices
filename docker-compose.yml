@@ -58,7 +58,7 @@ services:
     ports: -"6379:6379"
 
   rabbitmq:
-   image: rabbit:3-management
+    image: rabbit:3-management
     healthcheck:
     test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
     interval: 30s
