@@ -2,26 +2,26 @@ version: '3.8'
 
 services:
   api-gateway:
-  build: ./api-gateway
-  ports:
-    - "3000:3000"
-  env_file: ./api-gateway/.env
-  depends_on:
-    - redis
-    - rabbitmq
-  environment:
-  - REDIS_URL=redis://redis:6379
-  - RABBITMQ_URL=amqp://rabbitmq:5672
-
-  auth-service:
-    build: ./auth-service
-    env_file: ./auth-gateway/.env
+    build: ./api-gateway
+    ports:
+      - "3000:3000"
+    env_file: ./api-gateway/.env
     depends_on:
       - redis
       - rabbitmq
     environment:
-      - REDIS_URL=redis://redis:6379
-      - RABBITMQ_URL=amqp://rabbitmq:5672
+      REDIS_URL: redis://redis:6379
+      RABBITMQ_URL: amqp://rabbitmq:5672
+
+  auth-service:
+    build: ./auth-service
+    env_file: ./auth-service/.env
+    depends_on:
+      - redis
+      - rabbitmq
+    environment:
+      REDIS_URL: redis://redis:6379
+      RABBITMQ_URL: amqp://rabbitmq:5672
 
   post-service:
     build: ./post-service
@@ -30,8 +30,8 @@ services:
       - redis
       - rabbitmq
     environment:
-      - REDIS_URL=redis://redis:6379
-      - RABBITMQ_URL=amqp://rabbitmq:5672
+      REDIS_URL: redis://redis:6379
+      RABBITMQ_URL: amqp://rabbitmq:5672
 
   media-service:
     build: ./media-service
@@ -40,8 +40,8 @@ services:
       - redis
       - rabbitmq
     environment:
-      - REDIS_URL=redis://redis:6379
-      - RABBITMQ_URL=amqp://rabbitmq:5672
+      REDIS_URL: redis://redis:6379
+      RABBITMQ_URL: amqp://rabbitmq:5672
 
   search-service:
     build: ./search-service
@@ -50,17 +50,21 @@ services:
       - redis
       - rabbitmq
     environment:
-      - REDIS_URL=redis://redis:6379
-      - RABBITMQ_URL=amqp://rabbitmq:5672
+      REDIS_URL: redis://redis:6379
+      RABBITMQ_URL: amqp://rabbitmq:5672
 
   redis:
     image: redis:alpine
-    ports: -"6379:6379"
+    ports:
+      - "6379:6379"
 
   rabbitmq:
-    image: rabbit:3-management
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
     healthcheck:
-    test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
-    interval: 30s
-    timeout: 10s
-    retries: 5
+      test: ["CMD-SHELL", "rabbitmq-diagnostics -q ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
